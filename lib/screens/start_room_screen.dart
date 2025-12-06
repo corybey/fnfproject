@@ -199,69 +199,39 @@ class _StartRoomScreenState extends State<StartRoomScreen> {
                   
                   SizedBox(height: 40),
                   
-                  // Buttons
+                  // Buttons - CLEANED UP (no text overlay)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      // Start Button
+                      // Start Button - Only Icon
                       Container(
-                        width: 140,
-                        height: 60,
+                        width: 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed: _isTimerRunning ? null : _startTimer,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            padding: EdgeInsets.symmetric(vertical: 12),
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(12),
                           ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.play_arrow, size: 24),
-                              SizedBox(height: 4),
-                              Text(
-                                'Start',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
-                          ),
+                          child: Icon(Icons.play_arrow, size: 36),
                         ),
                       ),
                       
-                      // Stop Button
+                      // Stop Button - Only Icon
                       Container(
-                        width: 140,
-                        height: 60,
+                        width: 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed: _isTimerRunning ? _stopTimer : null,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
                             foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            padding: EdgeInsets.symmetric(vertical: 12),
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(12),
                           ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.stop, size: 24),
-                              SizedBox(height: 4),
-                              Text(
-                                'Stop',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
-                          ),
+                          child: Icon(Icons.stop, size: 36),
                         ),
                       ),
                     ],
@@ -269,27 +239,20 @@ class _StartRoomScreenState extends State<StartRoomScreen> {
                   
                   SizedBox(height: 20),
                   
-                  // Reset Button
+                  // Reset Button - Only Icon
                   Center(
                     child: Container(
-                      width: 140,
-                      height: 50,
+                      width: 70,
+                      height: 70,
                       child: ElevatedButton(
                         onPressed: _resetTimer,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.orange,
                           foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(12),
                         ),
-                        child: Text(
-                          'Reset Timer',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        child: Icon(Icons.refresh, size: 36),
                       ),
                     ),
                   ),

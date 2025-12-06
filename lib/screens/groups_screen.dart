@@ -151,30 +151,14 @@ class GroupsScreen extends StatelessWidget {
             ),
           ),
           
-          // Room (indented and clickable)
+          // Room (indented)
           Padding(
             padding: EdgeInsets.only(left: 16),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => StartRoomScreen(
-                      groupName: name,
-                      major: major,
-                      building: building,
-                      room: room,
-                    ),
-                  ),
-                );
-              },
-              child: Text(
-                room,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.blue[800],
-                  decoration: TextDecoration.underline,
-                ),
+            child: Text(
+              room,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[700],
               ),
             ),
           ),
@@ -183,7 +167,7 @@ class GroupsScreen extends StatelessWidget {
           if (members.isNotEmpty) SizedBox(height: 8),
           if (members.isNotEmpty) Divider(),
           
-          // Join Members and Chatroom Button
+          // Join Members and Buttons - CLEANED UP
           if (members.isNotEmpty)
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -197,8 +181,8 @@ class GroupsScreen extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    // Start Room Button
-                    ElevatedButton(
+                    // Start Room Button - Icon only
+                    IconButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -212,20 +196,14 @@ class GroupsScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green,
-                        foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text('Start Room'),
+                      icon: Icon(Icons.play_circle_outline, size: 28),
+                      color: Colors.green,
+                      tooltip: 'Start Room',
                     ),
                     SizedBox(width: 8),
                     
-                    // Chatroom Button
-                    ElevatedButton(
+                    // Chatroom Button - Icon only
+                    IconButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -234,15 +212,9 @@ class GroupsScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue[800],
-                        foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text('Chatroom'),
+                      icon: Icon(Icons.chat_bubble_outline, size: 28),
+                      color: Colors.blue[800],
+                      tooltip: 'Chatroom',
                     ),
                   ],
                 ),

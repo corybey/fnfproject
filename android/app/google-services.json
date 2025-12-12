@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1072648248508",
+    "project_id": "fnfproj-3a611",
+    "storage_bucket": "fnfproj-3a611.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072648248508:android:6be6acd01a6edcb446c4b9",
+        "android_client_info": {
+          "package_name": "com.example.fnf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHGtAthqIRvRydOJ9quPoBdkZ9gh9kGfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
